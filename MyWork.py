@@ -92,7 +92,7 @@ newframe=df[['Loan ID','Loan Insurance Enrolled (Yes/No)','Loan Amount Sanctione
 newframe['Loan Process Date']=(pd.DatetimeIndex(newframe['Loan Process Date']).year).map('{:,.0f}'.format)
 #newframe
 fig = px.bar(newframe, x="Loan Process Date",
-                color="Loan Amount Sanctioned by Bank on Insurance (Yes/No)", barmode="group", color_discrete_map={
+                color="Loan Amount Sanctioned by Bank on Insurance (Yes/No)", color_discrete_map={
                     'Yes':'brown',
                     'No':'darkgrey'
                 },labels={'count':'Number of Loans Enrolled for Insurance'})
