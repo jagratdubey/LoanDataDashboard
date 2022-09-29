@@ -2,10 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 st.write("""# Loan Data Dashboard - Jagrat Dubey""")
-@st.cache
-def loadme():
-    return pd.read_csv("datapo.csv")
-df=loadme()
+df = pd.read_csv("datapo.csv")
 
 # Tenure in Years
 st.subheader('Branch v/s Tenure Type of Loan :')
